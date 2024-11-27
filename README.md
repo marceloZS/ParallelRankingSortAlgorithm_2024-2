@@ -1,11 +1,12 @@
 # ParallelRankingSortAlgorithm_2024-2
 
-## Integrantes
-- Marcelo Zuloeta : 202110397
-
 El ordenamiento eficiente por ranking es un tópico crucial en el área de ciencias de la computación.
 
 El objetivo de este proyecto es llevar a cabo la tarea de implementar en paralelo el algoritmo de ordenamiento por ranking.
+
+## Integrantes
+- Marcelo Zuloeta : 202110397
+
 
 ## Contenido
 
