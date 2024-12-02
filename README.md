@@ -6,6 +6,8 @@ El objetivo de este proyecto es llevar a cabo la tarea de implementar en paralel
 
 ## Integrantes
 - Marcelo Zuloeta : 202110397
+- Juan Leandro :
+- Fernando Choque :
 
 
 ## Contenido
