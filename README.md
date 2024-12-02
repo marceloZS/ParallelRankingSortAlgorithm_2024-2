@@ -12,29 +12,7 @@ El objetivo de este proyecto es llevar a cabo la tarea de implementar en paralel
 El proyecto contiene lo siguiente
 ### PRAM TEÓRICO
 
-Input: d[1...n]
-Output: ranking de d(i,j,k) almacenado en b' en el proceso (i,j)
-
-1. Gossip:
-   forall (i, j) pardo
-       a[i, j] = gather a[1, j], ..., a[P, j] from all processes in column j
-
-2. Broadcast:
-   forall (i, j) pardo
-       a'[i, j] = broadcast a[i, j] to all processes in row i
-
-3. Sort:
-   forall (i, j) pardo
-       sort a'[i, j]
-
-4. Local Ranking:
-   forall (i, j) pardo
-       b[i, j] = rank elements in a'[i, j]
-
-5. Reduce:
-   forall (i, j) pardo
-       b'[i, j] = reduce sum of b[i, j] across all columns to process (i, 0)
-
+Especificado en el informe
 
 ### El código paralelizable utilizando una implementación de alto performance con el estándar Message Passaging Interface - MPI
 
