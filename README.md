@@ -12,7 +12,7 @@ El objetivo de este proyecto es llevar a cabo la tarea de implementar en paralel
 El proyecto contiene lo siguiente
 ### PRAM TEÓRICO
 
-Especificado en el informe
+Especificado en el informe Zuloeta_Computacion_Paralela_Informe
 
 ### El código paralelizable utilizando una implementación de alto performance con el estándar Message Passaging Interface - MPI
 
