@@ -205,41 +205,6 @@ int main(int argc, char** argv) {
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &size);
 
-    int gridDim = static_cast<int>(sqrt(size));
-    if (gridDim * gridDim != size) {
-        if (rank == 0) cerr << "Error: Number of processes must be a perfect square." << endl;
-        MPI_Finalize();
-        return 1;
-    }
-
-    const int rows = gridDim;
-    const int cols = gridDim;
-
-    if (argc < 2) {
-        if (rank == 0) cerr << "Usage: mpiexec -n <num_processes> ./program <message_size>" << endl;
-        MPI_Finalize();
-        return 1;
-    }
-
-    int msgSize = atoi(argv[1])/size;
-    if (msgSize <= 0) {
-        if (rank == 0) cerr << "Error: Message size must be a positive integer." << endl;
-        MPI_Finalize();
-        return 1;
-    }
-
-    int totalElements = rows * cols;
-    string inputData;
-
-    if (rank == 0) {
-        inputData = retrieveString(msgSize * totalElements);
-        if (inputData.size() % totalElements != 0) {
-            cerr << "Input Size [" << inputData.size() << "] doesn't match row * col size [" << totalElements << "]" << endl;
-            MPI_Finalize();
-            return 1;
-        }
-    }
-
     char* localData = new char[msgSize + 1];
     localData[msgSize] = '\0';
 
